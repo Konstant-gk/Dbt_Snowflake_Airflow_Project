@@ -1,0 +1,50 @@
+{
+  // Exclude dbt internal packages and installed packages from linting
+  "files.exclude": {
+    "**/dbt_internal_packages": true,
+    "**/dbt_packages": true,
+    "**/target": true,
+    "**/logs": true
+  },
+  // dbt extension settings (if using dbt Power User or similar extension)
+  "dbt.excludePaths": [
+    "dbt_internal_packages/**",
+    "dbt_packages/**",
+    "target/**",
+    "logs/**"
+  ],
+  // Disable dbt language server validation for internal packages
+  "dbt.enableLanguageServer": true,
+  // Disable dbt validation for internal packages
+  "files.associations": {
+    "**/dbt_internal_packages/**/*.yml": "plaintext",
+    "**/dbt_packages/**/*.yml": "plaintext"
+  },
+  // File watcher exclusions
+  "files.watcherExclude": {
+    "**/dbt_internal_packages/**": true,
+    "**/dbt_packages/**": true,
+    "**/target/**": true,
+    "**/logs/**": true
+  },
+  // Search exclusions
+  "search.exclude": {
+    "**/dbt_internal_packages": true,
+    "**/dbt_packages": true,
+    "**/target": true,
+    "**/logs": true
+  },
+  // Spell checker: ignore dbt/Jinja keywords and database terms
+  "cSpell.words": [
+    "endmacro",
+    "macro",
+    "ref",
+    "source",
+    "config",
+    "dbt",
+    "tpch",
+    "orderkey",
+    "lineitem"
+  ]
+}
+

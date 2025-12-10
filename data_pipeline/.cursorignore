@@ -1,0 +1,6 @@
+# Ignore dbt internal packages and generated files
+dbt_internal_packages/
+dbt_packages/
+target/
+logs/
+

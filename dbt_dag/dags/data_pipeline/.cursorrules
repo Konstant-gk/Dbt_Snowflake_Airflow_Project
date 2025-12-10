@@ -1,0 +1,47 @@
+# Cursor Rules for dbt + Snowflake Project
+
+This is a dbt project using Snowflake as the data warehouse.
+
+## Project Structure
+- Models are in `models/` directory
+  - `models/staging/` - Staging models (materialized as views)
+  - `models/marts/` - Mart models (materialized as tables)
+- Macros are in `macros/` directory
+- Tests are in `tests/` directory
+- Seeds are in `seeds/` directory
+- Snapshots are in `snapshots/` directory
+
+## dbt Configuration
+- Profile name: `data_pipeline`
+- Snowflake warehouse: `dbt_wh`
+- Staging models: materialized as views
+- Mart models: materialized as tables
+
+## dbt Best Practices
+- Use `{{ source() }}` macro for referencing source tables
+- Use `{{ ref() }}` macro for referencing other dbt models
+- Follow dbt naming conventions: staging models prefixed with `stg_`, intermediate with `int_`, facts with `fct_`
+- Write tests in YAML files or as singular test files
+- Use dbt_utils macros when appropriate (already installed)
+
+## Common dbt Commands
+- `dbt run` - Run all models
+- `dbt run --select staging.*` - Run only staging models
+- `dbt test` - Run all tests
+- `dbt compile` - Compile SQL without running
+- `dbt docs generate` - Generate documentation
+- `dbt deps` - Install dbt packages
+
+## SQL Style
+- Use Jinja templating for dbt models
+- Follow SQL style guide: lowercase keywords, proper indentation
+- Use CTEs for complex transformations
+- Add comments for complex logic
+
+## When helping with dbt:
+- Always use dbt macros (`ref()`, `source()`, `config()`) appropriately
+- Suggest proper materialization strategies
+- Recommend tests for data quality
+- Consider incremental models for large tables
+- Use dbt_utils macros when they simplify the code
+
