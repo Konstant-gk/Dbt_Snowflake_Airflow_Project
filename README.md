@@ -1,4 +1,4 @@
-# Dbt_Snowflake_Airflow-Project
+# Dbt Snowflake Airflow Project
 
 As a data analytics professional, I was tasked with designing and implementing an end-to-end data pipeline that transforms raw transactional data into analytics-ready fact tables. The goal was to create a **scalable, automated, and maintainable** solution that could handle daily data refreshes while ensuring data quality and providing clear lineage for stakeholders.
 
